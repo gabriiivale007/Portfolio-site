@@ -1,0 +1,567 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+a {text-decoration: none;}
+/*--------GENERAL--------*/
+html {
+    scroll-behavior: smooth;
+}
+
+.go-forward {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.go-forward img {
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s;
+
+}
+
+/*https://coolors.co/palette/00a6fb-0582ca-006494-003554-051923*/
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f1f1f1;
+}
+
+nav {
+    padding: 5px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: #516e801e 0px 4px 12px;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 25px;
+    width: auto;
+    margin-right: 10px;
+}
+
+nav .logo h1 {
+    transition: all 0.5s;
+    font-size: 1.1rem;
+    background: linear-gradient(to right, #00A6FB 0%, #006494 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    transition: all 1s;
+    text-decoration: none;
+    color: #051923;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    transition: all 0.5s;
+    background-color: #00A6FB;
+    font-size: 100%;
+    font-weight: 500;
+    color: #f1f1f1;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 1px;
+    background-color: #051923;
+    display: block;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+    width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+    transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 100vh;
+    padding: 20% 0;
+    background: #014e7a;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+}
+
+.active {
+    left: 0;
+    box-shadow: #959da533 0px 8px 24px;
+}
+
+.menubar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menubar ul li {
+    margin-bottom: 32px;
+}
+
+.menubar ul li a {
+    transition: all 0.5s;
+    text-decoration: none;
+    color: #fff;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+    transition: all 0.5s;
+    background-color: #00A6FB;
+}
+
+@media screen and (max-width: 790px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+}
+
+main {
+    margin-top: 4%;
+    display: flex;
+}
+
+
+
+
+
+/*--------HOME--------*/
+.welcome {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.logo-home {
+    width: 15%;
+
+}
+
+.titolo-home {
+    color: #003554;
+    font-size: 2.3rem;
+    font-weight: 1000;
+}
+
+.sottotitolo-home {
+    color: #003554;
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+.descrizione-home {
+    color: #006494;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.line {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    width: 60%;
+    border: 1.5px solid #003554;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.pro-title {
+    color: #003554;
+    font-size: 2.3rem;
+    font-weight: 1000;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+/*--------CONTATTI--------*/
+
+.contatti-page {
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.contatti-page {
+    color: #006494;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.whatsapp-button {
+    background-color: #f1f1f1;
+    border: 2px solid #25D366;
+    color: #25D366;
+    padding: 5px;
+    position: relative;
+    width: 120px;
+    height: 35px;
+    transition: 0.7s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    border: 2px solid #128C7E;
+}
+
+.instagram-button {
+    background-color: #f1f1f1;
+    border: 2px solid #E1306C;
+    padding: 5px;
+    position: relative;
+    width: 120px;
+    height: 35px;
+    transition: 0.7s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    color: #E1306C;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+
+.instagram-button:hover {
+    background-color: #E1306C;
+    color: #ffffff;
+}
+
+.tik-tok-button {
+    background-color: #f1f1f1;
+    border: 2px solid #000000;
+    padding: 5px;
+    position: relative;
+    width: 120px;
+    height: 35px;
+    transition: 0.7s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    color: #010101;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.tik-tok-button:hover {
+    background-color: #000000;
+    color: #00f2ea;
+
+}
+
+.git-hub-button {
+    background-color: #f1f1f1;
+    border: 2px solid #2dba4e;
+    padding: 5px;
+    position: relative;
+    width: 120px;
+    height: 35px;
+    transition: 0.7s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    color: #010101;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.git-hub-button:hover {
+    background-color: #2b3137;
+    border: 2px solid #2b3137;
+    color: #2dba4e;
+}
+
+.invio_center {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/*--------CHI SONO--------*/
+.content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: calc(100% - 88%);
+    margin-right: calc(100% - 88%);
+}
+
+.profile {
+    flex: 1;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.box-coll-git{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+
+}
+.description-github {
+    color: #003554;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+}
+.description{
+    margin-top: -1.5%;
+    color: #006494;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.description {
+    flex: 3;
+}
+
+.titolo-sono {
+    color: #003554;
+    font-size: 2.3rem;
+    font-weight: 1000;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.foto-prf {
+    width: 110%;
+    border-radius: 25px;
+}
+
+
+
+/*--------SERVIZI--------*/
+
+.elenco-pu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+.size-contet {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2%;
+    margin-left: calc(100% - 88%);
+    margin-right: calc(100% - 88%);
+}
+
+.immagine_support {
+    flex: 3;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.box-des-1 {
+    flex: 1;
+    margin-bottom: 3%;
+}
+
+.box-des-2 {
+    flex: 3;
+    margin-bottom: 3%;
+}
+
+
+.titolo-sono {
+    color: #003554;
+    font-size: 2.3rem;
+    font-weight: 1000;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.foto-des {
+    width: 80%;
+    border-radius: 25px;
+}
+
+.btn-servizi {
+    background-color: #f1f1f1;
+    border: 2px solid #006494;
+    padding: 5px;
+    position: relative;
+    width: 120px;
+    height: 35px;
+    transition: 0.7s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    color: #006494;
+    margin-left: 1%;
+    margin-right: 0.5%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+
+}
+
+.btn-servizi:hover {
+    background-color: #006494;
+    color: #ffffff;
+}
+
+
+.descrizione-servizi-1 {
+    color: #006494;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-right: 20%;
+    text-align: left;
+    margin-left: 1%;
+}
+
+.descrizione-servizi-2 {
+    color: #006494;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-left: 20%;
+    text-align: right;
+    margin-right: 1%;
+}
+
+.btn-servizi-2 {
+    background-color: #f1f1f1;
+    border: 2px solid #006494;
+    padding: 5px;
+    position: relative;
+    width: 120px;
+    height: 35px;
+    transition: 0.7s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    color: #006494;
+    margin-left: 0.5%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    float: right;
+}
+.btn-servizi-2:hover {
+    background-color: #006494;
+    color: #ffffff;
+}
+
+/*--------CHI SONO--------*/
+.btn-contact {
+    background-color: #f1f1f1;
+    border: 2px solid #006494;
+    padding: 5px;
+    position: relative;
+    width: auto;
+    height: 35px;
+    transition: 0.7s;
+    font-size: 17px;
+    border-radius: 0.4em;
+    color: #006494;
+    margin-left: 0.5%;
+    margin-right: 1%;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+
+.btn-contact:hover {
+    background-color: #006494;
+    color: #ffffff;
+}
+
+main {
+    margin-bottom: 4%;
+
+}
